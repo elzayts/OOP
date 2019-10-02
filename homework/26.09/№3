@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace n3
+{
+    class Converter
+    {
+        private double usd, eur;
+        public Converter(double usd1, double eur1)
+        {
+            this.eur = eur1;
+            this.usd = usd1;
+        }
+        public void UahToUsd(double uah)
+        {
+            double ans = uah / usd;
+            Console.WriteLine("in {0} uah {1} usd", uah, ans);
+        }
+        public void UahToEur(double uah)
+        {
+            double ans = uah / eur;
+            Console.WriteLine("in {0} uah {1} eur", uah, ans);
+        }
+        public void UsdToUah(double usd1)
+        {
+            double ans = usd1 * usd; 
+            Console.WriteLine("in {0} usd {1} auh", usd1, ans);
+        }
+        public void EurToUah(double eur1)
+        {
+            double ans = eur * eur1; 
+            Console.WriteLine("in {0} eur {1} auh", eur1, ans);
+        }
+    }
+
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int option;
+            Console.WriteLine("enter course of usd");
+            Console.WriteLine("enter course of eur");
+            Converter conv = new Converter(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
+
+            Console.WriteLine("1) uah to usd");
+            Console.WriteLine("2) uah to eur");
+            Console.WriteLine("3) usd to uah");
+            Console.WriteLine("4) eur to uah");
+            do
+            {
+                Console.WriteLine("insert number of chosen option");
+                option =Convert.ToInt32(Console.ReadLine());
+            }
+            while (option < 1 || option > 4);
+
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("Enter amount of uah");
+                    conv.UahToUsd(Convert.ToDouble(Console.ReadLine()));
+                    break;
+                case 2:
+                    Console.WriteLine("Enter amount of uah");
+                    conv.UahToEur(Convert.ToDouble(Console.ReadLine()));
+                    break;
+                case 3:
+                    Console.WriteLine("Enter amount of usd");
+                    conv.UsdToUah(Convert.ToDouble(Console.ReadLine()));
+                    break;
+                case 4:
+                    Console.WriteLine("Enter amount of eur");
+                    conv.EurToUah(Convert.ToDouble(Console.ReadLine()));
+                    break;
+            }
+            Console.ReadKey();
+        }
+       
+    }
+}

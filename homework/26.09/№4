@@ -1,0 +1,173 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace n4
+{
+    class Triangle
+    {
+        protected double a, b, c;
+
+        public Triangle()
+        {
+            a = 3;
+            b = 4;
+            c = 5;
+        }
+        public Triangle(double a1, double b1, double c1)
+        {
+            do
+            {
+                Console.WriteLine("insert positive length of sides a, b, c");
+                a = Convert.ToDouble(Console.ReadLine());
+                b = Convert.ToDouble(Console.ReadLine());
+                c = Convert.ToDouble(Console.ReadLine());
+            }
+            while ((a + b <= c) || (a + c <= b) || (b +c <= a)||(a<=0)||(b<=0)||(c<=0));
+
+
+        }
+
+        public void ChangeA()
+        { double a1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                a1 = Convert.ToDouble(Console.ReadLine());
+                
+            }
+            while ((a1 <= 0)|| (a1 + b <= c) || (a1 + c <= b) || (b + c <= a1));
+            a = a1;
+
+        }
+        public void ChangeB()
+        {
+            double b1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                b1 = Convert.ToDouble(Console.ReadLine());
+                
+            }
+            while ((b1 <= 0) || (a + b1 <= c) || (a + c <= b1) || (b1 + c <= a));
+            b = b1;
+        }
+        public void ChangeC()
+        {
+            double c1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                c1 = Convert.ToDouble(Console.ReadLine());
+                
+            }
+            while ((c1 <= 0) || (a + b <= c1) || (a + c1 <= b) || (b + c1 <= a));
+            c = c1;
+        }
+
+        public double perimeter()
+        {
+            return a + b + c;
+        }
+        public double AngleA()
+        {
+            return Math.Round(Math.Acos((b * b + c * c - a * a) / (2 * b * c)), 2);
+        }
+        public double AnlgeB()
+        {
+            return Math.Round(Math.Acos(( c * c + a * a - b*b) /( 2 * a * c)), 2);
+        }
+        public double AngleC()
+        {
+            return Math.Round(Math.Acos((b * b +  a * a - c*c) / (2 * b * a)), 2);
+        }
+    }
+
+    class RavnostoronnniyTriangle: Triangle
+    {
+        private double square;
+
+        public RavnostoronnniyTriangle()
+        {
+            square = 0;
+            
+            {
+                Console.WriteLine("insert positive length of side a");
+              double  a1= Convert.ToDouble(Console.ReadLine());
+                a = a1;
+                b = a1;
+                c = a1;
+            }
+            while (a<=0) ;
+        }
+
+        public new void ChangeA()
+        {
+            double a1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                a1 = Convert.ToDouble(Console.ReadLine());
+
+            }
+            while ((a1 <= 0) || (a1 + b <= c) || (a1 + c <= b) || (b + c <= a1));
+            a = a1;
+            b = a1;
+            c = a1;
+
+
+        }
+        public new void ChangeB()
+        {
+            double b1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                b1 = Convert.ToDouble(Console.ReadLine());
+
+            }
+            while ((b1 <= 0) || (a + b1 <= c) || (a + c <= b1) || (b1 + c <= a));
+            a = b1;
+            b = b1;
+            c = b1;
+        }
+        public new void ChangeC()
+        {
+            double c1;
+            do
+            {
+                Console.WriteLine("insert length of side a, which is > 0");
+                c1 = Convert.ToDouble(Console.ReadLine());
+
+            }
+            while ((c1 <= 0) || (a + b <= c1) || (a + c1 <= b) || (b + c1 <= a));
+            a = c1;
+            b = c1;
+            c = c1;
+        }
+        public double calculateSquare()
+        {
+            square= a * a * Math.Sqrt(3) / 4;
+            return square;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Triangle a = new Triangle(0,0,0);
+            Console.WriteLine(a.perimeter());
+            a.ChangeA();
+            Console.WriteLine(a.AngleA());
+            RavnostoronnniyTriangle b = new RavnostoronnniyTriangle();
+            Console.WriteLine(b.AngleA());
+            b.ChangeB();
+            Console.WriteLine(b.perimeter());
+            Console.WriteLine(b.calculateSquare());
+            Console.ReadKey();
+
+        }
+    }
+}

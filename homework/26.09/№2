@@ -1,0 +1,134 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace n2
+{
+    class Group
+    {
+        private GoodStudent a, b;
+        private BadStudent c;
+        public Group(Student first, Student second, Student third)
+        {
+           a= (GoodStudent) first;
+            b = (GoodStudent)second;
+            c = (BadStudent)third;
+        }
+
+        public void AboutStudents()
+        {
+            a.getName();
+            a.Study();
+            a.Read();
+            a.Write();
+            a.Relax();
+
+            b.getName();
+            b.Study();
+            b.Read();
+            b.Write();
+            b.Relax();
+
+            c.getName();
+            c.Study();
+            c.Read();
+            c.Write();
+            c.Relax();
+        }
+
+
+    }
+    class Student
+    {
+       protected string name;
+       
+
+        public Student(string Name)
+        {
+
+            this.name = Name;
+        }
+
+        public void getName()
+        {
+            Console.WriteLine(name);
+        }
+        public void Study()
+        {
+            Console.WriteLine("Studying");
+        }
+        public void Read()
+        {
+            Console.WriteLine("Reading");
+        }
+        public void Write()
+        {
+            Console.WriteLine("Writing");
+        }
+        public void Relax()
+        {
+            Console.WriteLine("Relaxing");
+        }
+    }
+    class GoodStudent: Student
+    {
+        
+        public GoodStudent(string name) : base(name)
+        { }
+
+        public new void Study()
+        {
+            Console.WriteLine("Studying good");
+        }
+        public new void Read()
+        {
+            Console.WriteLine("Reading good");
+        }
+        public new void Write()
+        {
+            Console.WriteLine("Writing good");
+        }
+        public new void Relax()
+        {
+            Console.WriteLine("Not Relaxing");
+        }
+    }
+    class BadStudent: Student
+    {
+        public BadStudent(string name) : base(name)
+        { }
+
+        public new void Study()
+        {
+            Console.WriteLine("Studying bad");
+        }
+        public new void Read()
+        {
+            Console.WriteLine("Reading bad");
+        }
+        public new void Write()
+        {
+            Console.WriteLine("Writing bad");
+        }
+        public new void Relax()
+        {
+            Console.WriteLine("Relaxing very much");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GoodStudent a = new GoodStudent("Alice");
+            GoodStudent b = new GoodStudent("Sasha");
+            BadStudent c = new BadStudent("Den");
+            Group g = new Group(a, b, c);
+            g.AboutStudents();
+
+            Console.ReadKey();
+              
+        }
+    }
+}

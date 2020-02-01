@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<AnimeList>
+  <Anime
+    Title="Naruto"
+    Author="Masasi Kisimoto"
+    Year="2002"
+    Episodes="720"
+    Rating="8.5"
+    Genres="adventure, fantasy, martial arts">
+  </Anime>
+  <Anime
+    Title="Bleach"
+    Author="Tite Kubo"
+    Year="2004"
+    Episodes="366"
+    Rating="8.1"
+    Genres="adventure, supernatural">
+  </Anime>
+  <Anime
+    Title="Sword Art Online"
+    Author="Reki Kawahara"
+    Year="2011"
+    Episodes="96"
+    Rating="7.7"
+    Genres="adventure, science fiction">
+  </Anime>
+  <Anime
+    Title="Psycho Pass"
+    Author="Naoyoshi Shiotani"
+    Year="2012"
+    Episodes="41"
+    Rating="8.2"
+    Genres="crime, cyberpunk, dystopia">
+  </Anime>
+  <Anime
+    Title="Hagane no renkinjutsushi"
+    Author="Hiromu Arakawa"
+    Year="2003"
+    Episodes="51"
+    Rating="8.6"
+    Genres="adventure, dark fantasy, science fiction">
+  </Anime>
+  <Anime
+    Title="Blue exorcist"
+    Author="Kazue Kato"
+    Year="2011"
+    Episodes="25"
+    Rating="7.6"
+    Genres="adventure, dark fantasy">
+  </Anime>
+  <Anime
+    Title="Kuroshitsuji"
+    Author="Yana Toboso"
+    Year="2006"
+    Episodes="37"
+    Rating="7.8"
+    Genres="dark fantasy, thriller">
+  </Anime>
+</AnimeList>

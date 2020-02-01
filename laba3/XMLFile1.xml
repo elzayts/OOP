@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="XSLTFile1.xsl"?>
+<AnimeList>
+  <Anime>  
+    <Title>Naruto</Title>  
+    <Author>Masasi Kisimoto</Author>  
+    <Year>2002</Year>  
+    <Episodes>720</Episodes>  
+    <Rating>8.5</Rating>  
+    <Genres>adventure, fantasy, martial arts</Genres> 
+  </Anime>
+  <Anime>
+    <Title>Bleach</Title>
+    <Author>Tite Kubo</Author>
+    <Year>2004</Year>
+    <Episodes>366</Episodes>
+    <Rating>8.1</Rating>
+    <Genres>adventure, supernatural</Genres>
+  </Anime>
+  <Anime>
+    <Title>Sword Art Online</Title>
+    <Author>Reki Kawahara</Author>
+    <Year>2012</Year>
+    <Episodes>96</Episodes>
+    <Rating>7.7</Rating>
+    <Genres>adventure, science fiction</Genres>
+  </Anime>
+  <Anime>
+    <Title>Psycho Pass</Title>
+    <Author>Naoyoshi Shiotani</Author>
+    <Year>2012</Year>
+    <Episodes>41</Episodes>
+    <Rating>8.2</Rating>
+    <Genres>crime, cyberpunk, dystopia</Genres>
+  </Anime>
+  <Anime>
+    <Title>Hagane no renkinjutsushi</Title>
+    <Author>Hiromu Arakawa</Author>
+    <Year>2003</Year>
+    <Episodes>51</Episodes>
+    <Rating>8.6</Rating>
+    <Genres>adventure, dark fantasy, science fiction</Genres>
+  </Anime>
+  <Anime>
+    <Title>Blue exorcist</Title>
+    <Author>Kazue Kato</Author>
+    <Year>2011</Year>
+    <Episodes>25</Episodes>
+    <Rating>7.6</Rating>
+    <Genres>adventure, dark fantasy</Genres>
+  </Anime>
+  <Anime>
+    <Title>Kuroshitsuji</Title>
+    <Author>Yana Toboso</Author>
+    <Year>2006</Year>
+    <Episodes>37</Episodes>
+    <Rating>7.8</Rating>
+    <Genres>dark fantasy, thriller</Genres>
+  </Anime>
+</AnimeList>
